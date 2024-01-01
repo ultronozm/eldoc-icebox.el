@@ -59,10 +59,11 @@
 (defun eldoc-icebox-toggle-display ()
   "Toggle display of *eldoc-icebox* buffer."
   (interactive)
-  (let ((buffer (get-buffer "*eldoc-icebox*")))
-    (if-let (window (get-buffer-window buffer))
-        (quit-window nil window)
-      (eldoc-icebox--display buffer))))
+  (if-let ((buffer (get-buffer "*eldoc-icebox*")))
+      (if-let (window (get-buffer-window buffer))
+          (quit-window nil window)
+        (eldoc-icebox--display buffer))
+    (eldoc-icebox-store)))
 
 
 (provide 'eldoc-icebox)
