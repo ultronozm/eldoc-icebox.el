@@ -40,6 +40,7 @@
            (buffer-string))))
     (with-current-buffer (get-buffer-create "*eldoc-icebox*")
       (let ((inhibit-read-only t))
+        (special-mode)
         (erase-buffer)
         (insert eldoc-content))
       (eldoc-icebox--display (current-buffer)))))
