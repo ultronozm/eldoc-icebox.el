@@ -1,4 +1,4 @@
-#+title: eldoc-icebox: Pop-up buffer with frozen copy of eldoclean4-mode
+#+title: eldoc-icebox: Pop-up buffer with frozen copy of eldoc
 #+author: Paul Nelson
 
 * Overview
