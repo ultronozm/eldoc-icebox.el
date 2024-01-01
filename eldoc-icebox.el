@@ -24,9 +24,11 @@
 ;;; Commentary:
 
 ;; This package allows you to store a frozen copy of the content of
-;; the `eldoc' buffer in a pop-up window.  One command,
-;; `eldoc-icebox-store', stores the copy and displays the window,
-;; while `eldoc-icebox-toggle-display' toggles the display.
+;; the `eldoc' buffer in a pop-up window.
+;;
+;; `eldoc-icebox-store': stores the copy, displays the window.
+;; 
+;; `eldoc-icebox-toggle-display': toggles the display.
 
 ;;; Code:
 
