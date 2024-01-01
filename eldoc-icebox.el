@@ -50,7 +50,7 @@
     (direction . above)
     (window-height . 0.25))
   "Display action for the *eldoc-icebox* buffer."
-  :type 'sexp
+  :type display-buffer--action-custom-type
   :group 'eldoc-icebox)
 
 (defun eldoc-icebox--display (buffer)
