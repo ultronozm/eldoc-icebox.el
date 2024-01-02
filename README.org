@@ -35,6 +35,6 @@ Download this repository, install using =M-x package-install-file= (or package-v
          ("C-c C-n" . eldoc-icebox-toggle-display)))
 #+end_src
 
-Customize the binds as you like, and use the built-in documentation (=C-h f czm-lean4-whatever=) to see exactly what the commands do.
+Customize the binds as you like, and use the built-in documentation (=C-h f czm-eldoc-icebox-whatever=) to see exactly what the commands do.
 
 You can adjust the customization variable =eldoc-icebox-display-action= to change how the pop-up is displayed (see the [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Displaying-Buffers.html][display-buffer documentation]]).
