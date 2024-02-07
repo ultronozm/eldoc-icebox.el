@@ -55,11 +55,23 @@
   :type display-buffer--action-custom-type
   :group 'eldoc-icebox)
 
+(defcustom eldoc-icebox-post-display-hook nil
+  "Hook run after `eldoc-icebox-store'."
+  :type 'hook
+  :group 'eldoc-icebox)
+
+(add-hook 'eldoc-icebox-post-display-hook
+          #'shrink-window-if-larger-than-buffer)
+
 (defun eldoc-icebox--display (buffer)
   "Display BUFFER using `eldoc-icebox-display-action'."
   (let ((display-buffer-base-action
          eldoc-icebox-display-action))
-    (display-buffer buffer)))
+    (display-buffer buffer))
+  (let  ((current-window (selected-window)))
+        (select-window (display-buffer buffer))
+        (run-hooks 'eldoc-icebox-post-display-hook)
+        (select-window current-window)))
 
 (defun eldoc-icebox-toggle-display ()
   "Toggle display of *eldoc-icebox* buffer."
