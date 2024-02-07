@@ -37,12 +37,14 @@
   (interactive)
   (let ((eldoc-content
          (with-current-buffer (eldoc-doc-buffer)
-           (buffer-string))))
+           (buffer-string)))
+        (parent-buffer (current-buffer)))
     (with-current-buffer (get-buffer-create "*eldoc-icebox*")
       (let ((inhibit-read-only t))
         (special-mode)
         (erase-buffer)
-        (insert eldoc-content))
+        (insert eldoc-content)
+        (setq-local eldoc-icebox-parent-buffer parent-buffer))
       (eldoc-icebox--display (current-buffer)))))
 
 (defcustom eldoc-icebox-display-action
