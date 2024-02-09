@@ -15,7 +15,7 @@ the one-line documentation for that variable instead, to remind you of
 that variable's meaning.
 #+end_example
 
-One can also display the documentation in a separate buffer, or in a childframe -- see for instance [[https://github.com/casouri/eldoc-box][eldoc-box]].
+One can also display the documentation in a separate buffer, or in a childframe -- see for instance =M-x eldoc-doc-buffer= or [[https://github.com/casouri/eldoc-box][eldoc-box]].
 
 The present package addresses the following situation: you want to stare at a copy of the docs for one position while editing at another position.  To achieve this, it introduces commands that allow you to store a frozen copy of the content of the *eldoc* buffer in a pop-up window:
 - =eldoc-icebox-store= :: stores the copy, displays the window.
